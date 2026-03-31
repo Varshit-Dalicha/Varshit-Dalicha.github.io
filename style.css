@@ -1,10 +1,10 @@
-/* General Setup */
+/* General Setup with Earth Science/Geospatial Palette */
 :root {
-    --primary-color: #1a5f7a; /* A professional, academic dark blue */
-    --secondary-color: #227c9d;
-    --text-color: #333333;
-    --light-bg: #f8f9fa;
-    --border-color: #e9ecef;
+    --primary-color: #2c3e50; /* Deep Slate */
+    --secondary-color: #27ae60; /* Earth Green */
+    --text-color: #34495e;
+    --light-bg: #f4f6f7;
+    --border-color: #e0e6ed;
 }
 
 * {
@@ -18,28 +18,31 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--light-bg);
+    background-image: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 3rem;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 12px;
     min-height: 100vh;
 }
 
 /* Sticky Navigation Bar */
 .navbar {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .nav-container {
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -49,8 +52,9 @@ body {
 
 .logo {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 .nav-links a {
@@ -65,43 +69,86 @@ body {
     color: var(--secondary-color);
 }
 
+/* --- HERO SECTION (Photo + Intro) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%; /* Makes the photo circular */
+    border: 4px solid var(--border-color);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+}
+
 /* Typography & Headings */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-color);
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     font-size: 1.8rem;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 0.5rem;
     margin: 3rem 0 1.5rem 0;
+    display: inline-block; /* Makes border only as wide as text */
+}
+
+h2 i {
+    color: var(--secondary-color);
+    margin-right: 10px;
 }
 
 h3 {
     font-size: 1.3rem;
-    color: var(--secondary-color);
-    margin: 1.5rem 0 0.5rem 0;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.8rem 0;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: #6c757d;
-    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 /* Lists and Links */
 .expertise-list {
-    list-style-type: square;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+    list-style-type: none; /* Removed bullets in favor of icons */
+    margin-left: 0;
 }
 
 .expertise-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--border-color);
+}
+
+.expertise-list i {
+    color: var(--secondary-color);
+    width: 20px;
 }
 
 /* Card Design for Education */
@@ -111,13 +158,14 @@ h3 {
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    border-color: #cbd5e1;
 }
 
 .card-header {
@@ -133,75 +181,50 @@ h3 {
 
 .date {
     font-weight: 600;
-    color: #6c757d;
-    background: var(--light-bg);
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-/* Publication Styling */
-.publication-item {
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--secondary-color);
-}
-
-.pub-title {
-    font-size: 1.1rem;
-}
-
-.pub-authors {
-    color: #495057;
-}
-
-.pub-venue {
-    color: #6c757d;
-    font-size: 0.95rem;
-}
-
-.btn-link {
-    text-decoration: none;
     color: white;
-    background-color: var(--secondary-color);
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
+    background: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
     font-size: 0.85rem;
-    margin-left: 0.5rem;
-    transition: background-color 0.3s;
-}
-
-.btn-link:hover {
-    background-color: var(--primary-color);
 }
 
 /* Contact & Footer */
 .contact-box a {
     color: var(--secondary-color);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .contact-box a:hover {
     text-decoration: underline;
 }
 
+.contact-box p {
+    margin-bottom: 0.8rem;
+}
+
 .social-links {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .social-links a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-right: 15px;
-    font-weight: bold;
-    border: 1px solid var(--secondary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     background-color: var(--secondary-color);
     color: white;
+    border-color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -209,17 +232,25 @@ footer {
     text-align: center;
     padding: 2rem;
     color: #6c757d;
-    background-color: var(--light-bg);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
+    .container {
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 0;
+    }
+    .hero {
+        flex-direction: column-reverse; /* Puts photo on top on mobile */
         text-align: center;
     }
-    .nav-links {
-        margin-top: 1rem;
+    .expertise-list li {
+        text-align: left;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
     }
     .nav-links a {
         margin: 0 10px;
