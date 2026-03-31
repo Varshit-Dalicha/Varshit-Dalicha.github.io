@@ -1,0 +1,233 @@
+/* General Setup */
+:root {
+    --primary-color: #1a5f7a; /* A professional, academic dark blue */
+    --secondary-color: #227c9d;
+    --text-color: #333333;
+    --light-bg: #f8f9fa;
+    --border-color: #e9ecef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    min-height: 100vh;
+}
+
+/* Sticky Navigation Bar */
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Typography & Headings */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin: 3rem 0 1.5rem 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Lists and Links */
+.expertise-list {
+    list-style-type: square;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.expertise-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Card Design for Education */
+.card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.card-header h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.date {
+    font-weight: 600;
+    color: #6c757d;
+    background: var(--light-bg);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Publication Styling */
+.publication-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.pub-title {
+    font-size: 1.1rem;
+}
+
+.pub-authors {
+    color: #495057;
+}
+
+.pub-venue {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: var(--primary-color);
+}
+
+/* Contact & Footer */
+.contact-box a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    border: 1px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    background-color: var(--light-bg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 1rem;
+    }
+    .nav-links a {
+        margin: 0 10px;
+    }
+    .card-header {
+        flex-direction: column;
+    }
+    .date {
+        margin-bottom: 0.5rem;
+    }
+}
