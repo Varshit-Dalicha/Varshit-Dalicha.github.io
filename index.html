@@ -4,79 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varshit Dalicha - Research Scholar</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
-        header { border-bottom: 2px solid #eaeaea; padding-bottom: 1rem; margin-bottom: 2rem; }
-        h1 { color: #2c3e50; margin-bottom: 0.2rem; }
-        .subtitle { color: #7f8c8d; font-size: 1.2rem; margin-top: 0; }
-        h2 { color: #2980b9; margin-top: 2rem; border-bottom: 1px solid #eaeaea; padding-bottom: 0.5rem; }
-        .nav-links a { margin-right: 15px; color: #2980b9; text-decoration: none; font-weight: bold; }
-        .nav-links a:hover { text-decoration: underline; }
-        .publication { margin-bottom: 1.5rem; }
-        .pub-title { font-weight: bold; color: #2c3e50; }
-        .pub-authors { color: #555; }
-        .pub-venue { font-style: italic; color: #7f8c8d; }
-        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eaeaea; text-align: center; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Varshit Dalicha</h1>
-        <p class="subtitle">Research Scholar | IIT Gandhinagar</p>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Varshit Dalicha</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! I am a Research Scholar at IIT Gandhinagar, working under the supervision of Dr. Vikrant Jain. My research focuses on Using Geospatial tools to measure, evaluate and predict Gully Erosion.</p>
-        <p>Prior to this, I completed my Master's Degree at Maulana Azad National Institute of Technology.</p>
-    </section>
-
-    <section id="research">
-        <h2>Research Interests</h2>
-        <ul>
-            <li><strong>Topic 1:</strong> Brief description of what you study here.</li>
-            <li><strong>Topic 2:</strong> Brief description of what you study here.</li>
-            <li><strong>Topic 3:</strong> Brief description of what you study here.</li>
-        </ul>
-    </section>
-
-    <section id="publications">
-        <h2>Selected Publications</h2>
+    <main class="container">
         
-        <div class="publication">
-            <div class="pub-title">Paper Title Goes Here</div>
-            <div class="pub-authors">Varshit Dalicha, Co-author Name, Advisor Name</div>
-            <div class="pub-venue">Journal of Example Research, 2026. <a href="[Link to PDF/DOI]">[PDF]</a></div>
-        </div>
+        <section id="about" class="fade-in">
+            <h1>Varshit Dalicha</h1>
+            <p class="subtitle">Research Scholar | [Your University/Institute Name]</p>
+            
+            <p>Welcome to my academic portfolio. I am a Research Scholar at [Institution Name], currently pursuing my PhD under the supervision of Dr. [Advisor's Name]. My work primarily focuses on [insert broad research topic].</p>
+            
+            <h3>Areas of Expertise</h3>
+            <ul class="expertise-list">
+                <li><strong>[Skill/Field 1]:</strong> Description of your experience in this area.</li>
+                <li><strong>[Skill/Field 2]:</strong> Description of your experience in this area.</li>
+                <li><strong>[Skill/Field 3]:</strong> Description of your experience in this area.</li>
+                <li><strong>Technical Skills:</strong> [e.g., Python, MATLAB, AutoCAD, Statistical Analysis]</li>
+            </ul>
+        </section>
 
-        <div class="publication">
-            <div class="pub-title">Another Great Paper Title</div>
-            <div class="pub-authors">Co-author Name, Varshit Dalicha</div>
-            <div class="pub-venue">International Conference on Examples, 2025. <a href="[Link to PDF/DOI]">[PDF]</a></div>
-        </div>
-    </section>
+        <section id="education" class="fade-in">
+            <h2>Education</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Ph.D. in [Your Field]</h3>
+                    <span class="date">[Start Year] – Present</span>
+                </div>
+                <p><strong>[Your University Name]</strong>, [City, Country]</p>
+                <p><em>Thesis:</em> "[Tentative Thesis Title or Topic]"</p>
+            </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            <strong>Email:</strong> varshit.dalicha@iitgn.ac.in<br>
-            <strong>Office:</strong> D18, AB12, Department of Earth Sciences, IIT Gandhinagar<br>
-            <strong>Links:</strong> 
-            <a href="[Link]">Google Scholar</a> | 
-            <a href="[Link]">https://www.linkedin.com/in/varshit-v-dalicha-b7769416a/</a> | 
-            <a href="[Link]">GitHub</a>
-        </p>
-    </section>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Master of [Science/Arts/Tech] in [Your Field]</h3>
+                    <span class="date">[Start Year] – [End Year]</span>
+                </div>
+                <p><strong>[Your University Name]</strong>, [City, Country]</p>
+                <p><em>Dissertation:</em> "[Your Master's Thesis Title]"</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Bachelor of [Science/Arts/Tech] in [Your Field]</h3>
+                    <span class="date">[Start Year] – [End Year]</span>
+                </div>
+                <p><strong>[Your University Name]</strong>, [City, Country]</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Diploma in [Your Field]</h3>
+                    <span class="date">[Start Year] – [End Year]</span>
+                </div>
+                <p><strong>[Your Institute Name]</strong>, [City, Country]</p>
+            </div>
+        </section>
+
+        <section id="publications" class="fade-in">
+            <h2>Publications</h2>
+            <p>A comprehensive list of my academic contributions.</p>
+
+            <h3>1. Research Articles (Journals)</h3>
+            <div class="publication-item">
+                <p class="pub-title"><strong>[Paper Title]</strong></p>
+                <p class="pub-authors">Varshit Dalicha, [Co-author Name]</p>
+                <p class="pub-venue"><em>[Journal Name]</em>, [Year]. <a href="[Link]" class="btn-link" target="_blank">[PDF]</a> <a href="[DOI Link]" class="btn-link" target="_blank">[DOI]</a></p>
+            </div>
+            
+            <div class="publication-item">
+                <p class="pub-title"><strong>[Paper Title]</strong></p>
+                <p class="pub-authors">[Co-author Name], Varshit Dalicha</p>
+                <p class="pub-venue"><em>[Journal Name]</em>, [Year]. <a href="[Link]" class="btn-link" target="_blank">[PDF]</a></p>
+            </div>
+
+            <h3>2. Conference Proceedings</h3>
+            <div class="publication-item">
+                <p class="pub-title"><strong>[Presentation/Paper Title]</strong></p>
+                <p class="pub-authors">Varshit Dalicha</p>
+                <p class="pub-venue"><em>[Full Name of Conference]</em>, [City, Country], [Year]. <a href="[Link]" class="btn-link" target="_blank">[Slides]</a></p>
+            </div>
+
+            <h3>3. Workshops & Seminars</h3>
+            <div class="publication-item">
+                <p class="pub-title"><strong>[Workshop Title/Topic]</strong></p>
+                <p class="pub-venue">Presented at <em>[Event Name]</em>, organized by [Organization], [Year].</p>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Contact Information</h2>
+            <div class="contact-box">
+                <p><strong>Email:</strong> <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
+                <p><strong>Office:</strong> [Your Lab/Department], [Your University Name]</p>
+                <p class="social-links">
+                    <a href="[Your Google Scholar Link]" target="_blank">Google Scholar</a>
+                    <a href="[Your LinkedIn Link]" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Varshit-Dalicha" target="_blank">GitHub</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 Varshit Dalicha.</p>
+        <p>&copy; 2026 Varshit Dalicha. Designed for academic portfolio.</p>
     </footer>
 
 </body>
